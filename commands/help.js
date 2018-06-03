@@ -1,0 +1,43 @@
+const Discord = require("discord.js");
+
+module.exports.run = async (bot, message, args) => {
+
+   let commandsEmbed = new Discord.RichEmbed()
+   .setDescription("```Comandos```")
+   
+   .setColor("#5F04B4") //ROXO
+
+   .addField("```COMANDOS ALEATÓRIOS```", "oi");
+
+message.channel.send(commandsEmbed);
+
+   let helpEmbed = new Discord.RichEmbed()
+   .setDescription("```Help Menu```")
+   .setColor("#5F04B4") //ROXO
+
+   .addField("```Comandos para Membros```", "help, guildinfo, botinfo e report");
+
+message.channel.send(helpEmbed);
+
+   if(message.member.hasPermission("MANAGE_MESSAGES")){
+   let staffEmbed = new Discord.RichEmbed()
+   .setDescription("```Mod help Menu```")
+   .setColor("#5F04B4") //ROXO
+
+   .addField("```Comandos para STAFF```", "clear, kick, ban, mute, say, addrole, removerole, cargos [EM TEST]  ");
+
+message.channel.send(staffEmbed);
+
+try{
+  await message.author.send(staffEmbed);
+  message.react("🤔");
+}catch(e){
+  message.reply("https://cdn.discordapp.com/attachments/452142750268129283/452196351149867021/giphaay.gif Você não pode fazer isso!.")
+  }
+}
+
+}
+
+module.exports.help = {
+  name:"help"
+}
