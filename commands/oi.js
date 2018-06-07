@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
 //==============================================================
     //  message.delete().catch(O_o=>{});
 
-      return message.channel.send("Olá!");
+      return message.channel.send("Olá! Oi? Chamou?");
 }
 
 module.exports.help = {
