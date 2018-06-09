@@ -50,12 +50,12 @@ bot.on("message", async message => {
   if(message.author.bot) return;
   if(message.channel.type == "dm") return;
 
-  //let prefix = botconfig.prefix;
+  let prefix = botconfig.prefix;
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
-  //let commandfile = bot.commands.get(cmd.slice(prefix.length));
-  let commandfile = bot.commands.get(cmd.slice);
+  let commandfile = bot.commands.get(cmd.slice(prefix.length));
+  //let commandfile = bot.commands.get(cmd.slice);
   if(commandfile) commandfile.run(bot,message,args);
 });
 //==============================================================
