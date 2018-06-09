@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
   if(!message.member.hasPermission("MANAGE_MEMBERS")) return message.reply("https://cdn.discordapp.com/attachments/452142750268129283/452196351149867021/giphaay.gif Você não pode fazer isso!.");
   if (args[0] == "help"){
-    message.reply("use: `%removerole <user> <role>"` **OBS:Não mencione o cargo, isso é! Não use o @ + nome do cargo**);
+    message.reply("use: `%removerole <user> <role>` **OBS:Não mencione o cargo, isso é! Não use o @ + nome do cargo**");
     return;
   }
   let rMember = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
