@@ -7,12 +7,12 @@ module.exports.run = async (bot, message, args) => {
 //==============================================================
     //  message.delete().catch(O_o=>{});
 
-    let fazerEmbed = new Discord.RichEmbed()
+    let fazerembed = new Discord.RichEmbed()
     .setColor("#5F04B4") //ROXO
 
     .addField("http://prntscr.com/jhraie");
 
-    message.channel.send(fazerEmbed);
+    message.channel.send(fazerembed);
 
 }
 
