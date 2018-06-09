@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
 
     .addField("http://prntscr.com/jhraie");
 
-      return message.channel.send(fazerEmbed);
+    message.channel.send(fazerEmbed);
 
 }
 
