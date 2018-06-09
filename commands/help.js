@@ -31,7 +31,8 @@ message.channel.send(staffEmbed);
 //try{
 //  await message.author.send(staffEmbed);
 //  message.react("🤔");
-//}catch(e){
+//}catch(e)
+  {
   message.reply("https://cdn.discordapp.com/attachments/452142750268129283/452196351149867021/giphaay.gif Você não pode fazer isso!.")
   }
 }
