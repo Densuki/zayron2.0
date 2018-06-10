@@ -62,6 +62,7 @@ bot.on("message", async message => {
 //==============================================================
 //LEVEL UP
 //==============================================================
+  
   let xpAdd = Math.floor(Math.random() * 7) + 8;
   console.log(xpAdd);
 
@@ -92,6 +93,7 @@ bot.on("message", async message => {
 //==============================================================
 //COOLDOWNS
 //==============================================================
+  
   let prefix = prefixes[message.guild.id].prefixes;
   if(!message.content.startsWith(prefix)) return;
   if(cooldown.has(message.author.id)){
@@ -102,17 +104,6 @@ bot.on("message", async message => {
     cooldown.add(message.author.id);
   }
 
-
-  let messageArray = message.content.split(" ");
-  let cmd = messageArray[0];
-  let args = messageArray.slice(1);
-
-  let commandfile = bot.commands.get(cmd.slice(prefix.length));
-  if(commandfile) commandfile.run(bot,message,args);
-
-  setTimeout(() => {
-    cooldown.delete(message.author.id)
-  }, cdseconds * 1000)
 //==============================================================
 //
 //==============================================================  
@@ -126,6 +117,11 @@ bot.on("message", async message => {
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   //let commandfile = bot.commands.get(cmd.slice);
   if(commandfile) commandfile.run(bot,message,args);
+  
+  setTimeout(() => {
+    cooldown.delete(message.author.id)
+  }, cdseconds * 1000)  
+  
 });
 //==============================================================
 //MUSIC
