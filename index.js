@@ -108,7 +108,7 @@ bot.on("message", async message => {
 //
 //==============================================================  
 
-  let prefix = botconfig.prefix;
+  //let prefix = botconfig.prefix;
   let prefix = prefixes[message.guild.id].prefixes;
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0];
