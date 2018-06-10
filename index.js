@@ -82,7 +82,8 @@ bot.on("message", async message => {
      let lvlup = new Discord.RichEmbed()
      .setTitle("🎉⬆️Rank Up!⬆️🌟")
      .setColor(purple)
-     .addField("🎇Próximo Nível🎇", curlvl + 1);
+     .addField("🎇Próximo Nível🎇", curlvl + 1)
+     .addField("🌟Use o comando rank para verificar seus STATUS!🌟");
 
      message.channel.send(lvlup).then(msg => {msg.delete(100000)});
    }
