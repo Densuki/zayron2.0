@@ -5,8 +5,8 @@ module.exports.run = async (bot, message, args) => {
 //PERMISSÕES
 //==============================================================
 
-  if(!message.member.hasPermission("MANAGE_ROLES")) return message.reply("https://cdn.discordapp.com/attachments/452142750268129283/452196351149867021/giphaay.gif Você não pode fazer isso!.");
-  if(!message.member.hasPermission("MANAGE_MEMBERS")) return message.reply("https://cdn.discordapp.com/attachments/452142750268129283/452196351149867021/giphaay.gif Você não pode fazer isso!.");
+  if(!message.member.hasPermission("MANAGE_ROLES")) return message.reply("https://cdn.discordapp.com/attachments/452142750268129283/452196351149867021/giphaay.gif Você não pode fazer isso!.").then(msg => msg.delete(5000));
+  if(!message.member.hasPermission("MANAGE_MEMBERS")) return message.reply("https://cdn.discordapp.com/attachments/452142750268129283/452196351149867021/giphaay.gif Você não pode fazer isso!.").then(msg => msg.delete(5000));
 
 //==============================================================
 //EMBED
@@ -18,9 +18,10 @@ let cargoEmbed = new Discord.RichEmbed()
 //==============================================================
 //REAÇÕES EMBED
 //==============================================================
-message.channel.send(cargoEmbed).then(msg => {
+message.channel.send(cargoEmbed).then(msg => { msg.delete(9000)
    msg.react("⭐")
    msg.react("🎯")
+
 })
 //==============================================================
 //CARGOS POR REAÇÕES

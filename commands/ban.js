@@ -3,16 +3,16 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
 
   //%kick @daeshan para banir a pessoa
-     if(!message.member.hasPermission("MANAGE_MEMBERS")) return message.channel.send("https://cdn.discordapp.com/attachments/452142750268129283/452196351149867021/giphaay.gif Você não pode fazer isso!");
+     if(!message.member.hasPermission("MANAGE_MEMBERS")) return message.channel.send("https://cdn.discordapp.com/attachments/452142750268129283/452196351149867021/giphaay.gif Você não pode fazer isso!").then(msg => msg.delete(5000));
      if (args[0] == "help"){
       message.reply("use: %ban <user> <motivo>");
       return;
     }
       let bUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-      if(!bUser) return message.channel.send("http://prntscr.com/jpmc6o Não consigo o encontrar usuário!");
+      if(!bUser) return message.channel.send("http://prntscr.com/jpmc6o Não consigo o encontrar usuário!").then(msg => msg.delete(5000));
       let bReason = args.join(" ").slice(22);
 
-      if(bUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("http://prntscr.com/jhraie Essa pessoa não pode ser banida!");
+      if(bUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("http://prntscr.com/jhraie Essa pessoa não pode ser banida!").then(msg => msg.delete(5000));
 
       let banEmbed = new Discord.RichEmbed()
       .setDescription("```Ban```")

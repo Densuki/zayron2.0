@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
       .addField("**Criado em**", bot.user.createdAt)
        .addField("**INVITE**, https://discordapp.com/api/oauth2/authorize?client_id=451409543088308227&permissions=8&scope=bot");
 
-      return message.channel.send(botembed);
+      return message.channel.send(botembed).then(msg => {msg.delete(9000)});
 }
 
 module.exports.help = {

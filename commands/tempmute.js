@@ -65,11 +65,11 @@ module.exports.run = async (bot, message, args) => {
     reportschannel.send(muteEmbed);
 
     await(tomute.addRole(muterole.id));
-    message.reply(`<@${tomute.id}>https://cdn.discordapp.com/attachments/452142750268129283/452191989694464000/3oz8xuEGUFVTjvOla0.gif **foi silenciado por** ${ms(ms(mutetime))}`);
+    message.reply(`<@${tomute.id}>https://cdn.discordapp.com/attachments/452142750268129283/452191989694464000/3oz8xuEGUFVTjvOla0.gif **foi silenciado por** ${ms(ms(mutetime))}`).then(msg => msg.delete(5000));
 
     setTimeout(function(){
       tomute.removeRole(muterole.id);
-      message.channel.send(`<@${tomute.id}>http://prntscr.com/jpnsov **foi desmutado!**`);
+      message.channel.send(`<@${tomute.id}>http://prntscr.com/jpnsov **foi desmutado!**`).then(msg => msg.delete(5000));
     }, ms(mutetime));
 
 

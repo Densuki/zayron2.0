@@ -6,11 +6,11 @@ module.exports.run = async (bot, message, args) => {
 
 
     if (args[0] == "help"){
-      message.reply("use: %report <user> <motivo>\n\n exemplo: `%report @zayron Por ser um humano perfeito!`");
+      message.reply("use: %report <user> <motivo>\n\n exemplo: `%report @zayron Por ser um humano perfeito!`").then(msg => msg.delete(5000));
       return;
     }
     let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-    if (!rUser) return message.channel.send("http://prntscr.com/jpmc6o Não foi possível encontrar o usuário.");
+    if (!rUser) return message.channel.send("http://prntscr.com/jpmc6o Não foi possível encontrar o usuário.").then(msg => msg.delete(5000));
     let reason = args.join(" ").slice(22);
 
     let reportEmbed = new Discord.RichEmbed()
