@@ -4,7 +4,7 @@ module.exports.run = async (bot, message, args) => {
 
    let commandsEmbed = new Discord.RichEmbed()
    .setDescription("```Comandos```")
-   
+
    .setColor("#5F04B4") //ROXO
 
    .addField("```COMANDOS ALEATÓRIOS```", "oi");
@@ -28,13 +28,13 @@ message.channel.send(helpEmbed);
 
 message.channel.send(staffEmbed);
 
+message.reply("https://cdn.discordapp.com/attachments/452142750268129283/452196351149867021/giphaay.gif Você não pode fazer isso!.")
+
 //try{
 //  await message.author.send(staffEmbed);
 //  message.react("🤔");
 //}catch(e)
-  {
-  message.reply("https://cdn.discordapp.com/attachments/452142750268129283/452196351149867021/giphaay.gif Você não pode fazer isso!.")
-  }
+
 }
 
 }
