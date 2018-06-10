@@ -103,7 +103,7 @@ bot.on("message", async message => {
 //LEVEL UP
 //==============================================================
   
-  let xpAdd = Math.floor(Math.random() * 12) + 13;
+  let xpAdd = Math.floor(Math.random() * 1) + 2;
   console.log(xpAdd);
 
   if(!xp[message.author.id]){
