@@ -86,7 +86,7 @@ bot.on("message", async message => {
 //==============================================================
 //COOLDOWNS
 //==============================================================
-  let prefix = prefixes[message.guild.id].prefixes;
+ // let prefix = prefixes[message.guild.id].prefixes;
   if(!message.content.startsWith(prefix)) return;
   if(cooldown.has(message.author.id)){
     message.delete();
