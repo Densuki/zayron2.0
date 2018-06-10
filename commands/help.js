@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
 
    .setColor("#5F04B4") //ROXO
 
-   .addField("```COMANDOS ALEATÓRIOS```", "oi, doggo");
+   .addField("```COMANDOS ALEATÓRIOS```", "oi, doggo e react");
 
 message.channel.send(commandsEmbed);
 
@@ -15,7 +15,7 @@ message.channel.send(commandsEmbed);
    .setDescription("```Help Menu```")
    .setColor("#5F04B4") //ROXO
 
-   .addField("```Comandos para Membros```", "rank, help, guildinfo, botinfo e report");
+   .addField("```Comandos para Membros```", "pay, coins, rank, help, guildinfo, botinfo e report");
 
 message.channel.send(helpEmbed);
 
