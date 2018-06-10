@@ -51,8 +51,8 @@ bot.on("ready", async () => {
 //==============================================================
 bot.on("guildMemberAdd", async member => {
   console.log(`${member.id} Entrou no servidor.`);
-  
-  let welcomechannel = member.guild.channels.find(`name`, "saídas-entradas");
+
+  let welcomechannel = member.guild.channels.find(`name`, "chat-principal");
   welcomechannel.send(`Seja Bem-Vindo ${member}. Não esqueça de ler as regras!`);
 });
 //==============================================================
@@ -60,8 +60,8 @@ bot.on("guildMemberAdd", async member => {
 //==============================================================
 bot.on("guildMemberRemove", async member => {
   console.log(`${member.id} Saiu do servidor.`);
-  
-  let welcomechannel = member.guild.channels.find(`name`, "saídas-entradas");
+
+  let welcomechannel = member.guild.channels.find(`name`, "chat-principal");
   welcomechannel.send(`É uma pena que mais um de nossa tropa acabara de nos deixar. Nos vemos na próxima ${member}`);
 });
 //==============================================================
@@ -69,40 +69,45 @@ bot.on("guildMemberRemove", async member => {
 //==============================================================
 
 bot.on("ChannelCreate", async channel => {
-  
+
   console.log(`${channel.name} Foi criado!`);
-  
-  let sChannel = channel.guild.channels.find(`name`, "reports");
-  sChannel.send(`${channel} Foi criado`);  
-});  
+
+  let sChannel = channel.guild.channels.find(`name`, "general");
+  sChannel.send(`${channel} Foi criado`);
+});
 //==============================================================
 //Apagamento de Canais | Sala
 //==============================================================
 
 bot.on("ChannelDelete", async channel => {
-  
+
   console.log(`${channel.name} Foi deletado!`);
-  
-  let sChannel = channel.guild.channels.find(`name`, "reports");
-  sChannel.send(`${channel.name} Foi deletado`);  
-});  
+
+  let sChannel = channel.guild.channels.find(`name`, "general");
+  sChannel.send(`${channel.name} Foi deletado`);
+});
 //==============================================================
 //PARA AS MENSAGENS FUNCIONAREM
 //==============================================================
 bot.on("message", async message => {
   if(message.author.bot) return;
   if(message.channel.type == "dm") return;
-  
+//==============================================================
+//PREFIX
+//==============================================================
   let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
   if(!prefixes[message.guild.id]){
     prefixes[message.guild.id] = {
       prefixes: botconfig.prefix
-    };   
+
+    };
   }
+  //let prefix = prefixes[message.guild.id].prefixes;
+  //console.log(prefix);
 //==============================================================
 //LEVEL UP
 //==============================================================
-  
+
   let xpAdd = Math.floor(Math.random() * 1) + 2;
   console.log(xpAdd);
 
@@ -115,7 +120,7 @@ bot.on("message", async message => {
 
    let curxp = xp[message.author.id].xp;
    let curlvl = xp[message.author.id].level;
-   let nxtLvl = xp[message.author.id].level * 300;
+   let nxtLvl = xp[message.author.id].level * 600;
    xp[message.author.id].xp = curxp + xpAdd;
    if(nxtLvl <= xp[message.author.id].xp){
      xp[message.author.id].level = curlvl + 1;
@@ -123,7 +128,7 @@ bot.on("message", async message => {
      .setTitle("🎉⬆️Rank Up!⬆️🌟")
      .setColor(purple)
      .addField("🎇Próximo Nível🎇", curlvl + 1)
-     .addField("⬆️⬆️", "🌟Use o comando rank para verificar seus STATUS!🌟");
+     .addField("⬆️⬆️", "🌟Use o comando `rank` para verificar seus STATUS!🌟");
 
      message.channel.send(lvlup).then(msg => {msg.delete(100000)});
    }
@@ -134,7 +139,7 @@ bot.on("message", async message => {
 //==============================================================
 //COOLDOWNS
 //==============================================================
-  
+
   let prefix = prefixes[message.guild.id].prefixes;
   if(!message.content.startsWith(prefix)) return;
   if(cooldown.has(message.author.id)){
@@ -147,22 +152,19 @@ bot.on("message", async message => {
 
 //==============================================================
 //
-//==============================================================  
+//==============================================================
+ let messageArray = message.content.split(" ");
+ let cmd = messageArray[0];
+ let args = messageArray.slice(1);
 
-  //let prefix = botconfig.prefix;
-  //let prefix = prefixes[message.guild.id].prefixes;
-  let messageArray = message.content.split(" ");
-  let cmd = messageArray[0];
-  let args = messageArray.slice(1);
+ let commandfile = bot.commands.get(cmd.slice(prefix.length));
+ //let commandfile = bot.commands.get(cmd.slice);
+ if(commandfile) commandfile.run(bot,message,args);
 
-  let commandfile = bot.commands.get(cmd.slice(prefix.length));
-  //let commandfile = bot.commands.get(cmd.slice);
-  if(commandfile) commandfile.run(bot,message,args);
-  
-  setTimeout(() => {
-    cooldown.delete(message.author.id)
-  }, cdseconds * 1000)  
-  
+ setTimeout(() => {
+   cooldown.delete(message.author.id)
+ }, cdseconds * 1000)
+
 });
 //==============================================================
 //MUSIC
@@ -175,9 +177,9 @@ bot.on("message", async message => {
 //==============================================================
 //PRO BOT FUNCIONAR
 //==============================================================
-//bot.login(botconfig.token);
+bot.login(botconfig.token);
 //bot.login(tokenfile.token);
-bot.login(token);
+//bot.login(token);
 //==============================================================
-// 
+//
 //==============================================================

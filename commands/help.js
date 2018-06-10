@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
 
    .setColor("#5F04B4") //ROXO
 
-   .addField("```COMANDOS ALEATÓRIOS```", "oi");
+   .addField("```COMANDOS ALEATÓRIOS```", "oi, doggo");
 
 message.channel.send(commandsEmbed);
 
@@ -24,7 +24,7 @@ message.channel.send(helpEmbed);
    .setDescription("```Mod help Menu```")
    .setColor("#5F04B4") //ROXO
 
-   .addField("```Comandos para STAFF```", "clear, kick, ban, mute, say, addrole, removerole, cargos [EM TEST]  ");
+   .addField("```Comandos para STAFF```", "prefix, clear, kick, ban, mute, say, addrole, removerole, cargos [EM TEST]  ");
 
 message.channel.send(staffEmbed);
 
