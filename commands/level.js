@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args) => {
   .setColor(purple)
   .addField("Level", curlvl, true)
   .addField("XP", curxp, true)
-  .setFooter(`Lhe falta força! Falta apenas ${difference} para o próximo Rank UP!`, message.author.displayAvatarURL);
+  .setFooter(`Falta apenas ${difference} para o próximo Rank UP!`, message.author.displayAvatarURL);
 
   message.channel.send(lvlEmbed).then(msg => {msg.delete(10000)});
 
