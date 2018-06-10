@@ -98,7 +98,7 @@ bot.on("message", async message => {
   if(!message.content.startsWith(prefix)) return;
   if(cooldown.has(message.author.id)){
     message.delete();
-    return message.reply("Você tem que esperar 5 segundos para usar o comando novamente.")
+    return message.reply("Você tem que esperar 60 segundos para usar o comando novamente.")
   }
   if(!message.member.hasPermission("ADMINISTRATOR")){
     cooldown.add(message.author.id);
