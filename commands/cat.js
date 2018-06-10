@@ -4,7 +4,7 @@ const superagent = require("superagent");
 module.exports.run = async (bot, message, args) => {
 
   let {body} = await superagent
-  .get(`https://random.cat`);
+  .get(`https://random.cat/meow`);
   
   let dogembed = new Discord.RichEmbed()
 
