@@ -52,10 +52,8 @@ bot.on("ready", async () => {
 bot.on("guildMemberAdd", async member => {
   console.log(`${member.id} Entrou no servidor.`);
   
-  regras = client.get_channel("390906027983372319")
-  
   let welcomechannel = member.guild.channels.find(`name`, "saídas-entradas");
-  welcomechannel.send(`Seja Bem-Vindo ${member}` leia as {}).format(member.mention, regras.mention);
+  welcomechannel.send(`Seja Bem-Vindo ${member}. Não esqueça de ler as regras!`);
 });
 //==============================================================
 //LEAVE
@@ -65,9 +63,29 @@ bot.on("guildMemberRemove", async member => {
   
   let welcomechannel = member.guild.channels.find(`name`, "saídas-entradas");
   welcomechannel.send(`É uma pena que mais um de nossa tropa acabara de nos deixar. Nos vemos na próxima ${member}`);
-
-
 });
+//==============================================================
+//Criação de Canais | Sala
+//==============================================================
+
+bot.on("ChannelCreate", async channel => {
+  
+  console.log(`${channel.name} Foi criado!`);
+  
+  let sChannel = channel.guild.channels.find(`name`, "reports");
+  sChannel.send(`${channel} Foi criado`);  
+});  
+//==============================================================
+//Apagamento de Canais | Sala
+//==============================================================
+
+bot.on("ChannelDelete", async channel => {
+  
+  console.log(`${channel.name} Foi deletado!`);
+  
+  let sChannel = channel.guild.channels.find(`name`, "reports");
+  sChannel.send(`${channel.name} Foi deletado`);  
+});  
 //==============================================================
 //PARA AS MENSAGENS FUNCIONAREM
 //==============================================================
