@@ -47,6 +47,28 @@ bot.on("ready", async () => {
 
 });
 //==============================================================
+//WELCOME
+//==============================================================
+bot.on("guildMemberAdd", async member => {
+  console.log(`${member.id} Entrou no servidor.`);
+  
+  regras = client.get_channel("390906027983372319")
+  
+  let welcomechannel = member.guild.channels.find(`name`, "saídas-entradas");
+  welcomechannel.send(`Seja Bem-Vindo ${member}` leia as {}).format(member.mention, regras.mention);
+});
+//==============================================================
+//LEAVE
+//==============================================================
+bot.on("guildMemberRemove", async member => {
+  console.log(`${member.id} Saiu do servidor.`);
+  
+  let welcomechannel = member.guild.channels.find(`name`, "saídas-entradas");
+  welcomechannel.send(`É uma pena que mais um de nossa tropa acabara de nos deixar. Nos vemos na próxima ${member}`);
+
+
+});
+//==============================================================
 //PARA AS MENSAGENS FUNCIONAREM
 //==============================================================
 bot.on("message", async message => {
@@ -131,69 +153,6 @@ bot.on("message", async message => {
 //==============================================================
 //WELCOME | LEAVE
 //==============================================================
-
-//==============================================================
-//WELCOME
-//==============================================================
-// client.on('guildMemberAdd', async member => {
-//
-//   let fetchwelcome = await db.fetch(`wmsg_${member.guild.id}`);
-//   let fetchchannel = await db.fetch(`wchannel_${member.guild.id}`);
-//   let fetchautorole = await db.fetch(`autorole_${member.guild.id}`);
-//
-//   let welcome;
-//   let channel;
-//   let autorole;
-//
-//   if(fetchwelcome == null) welcome = "Seja bem vindo ao {server}, {user}. Leia as regras";
-//   else welcome = fetchwelcome
-//
-//   if(fetchchannel == null) return;
-//   else channel = fetchchannel
-//
-//   if(fetchautorole == null) return;
-//   else autorole = fetchautorole
-//
-//   try {
-//
-//     let role = member.guid.roles.get(autorole);
-//     if(!role) return
-//     else member.addrole(role);
-//
-//     member.guild.channel.get(channel).send({embed: {  Description: welcome.replace('{user}', member.user).replace('{members}', member.guild.memberCount).repace('{server}', member.guild.name) }});
-//
-//   } catch(e) {
-//     return;
-//   }
-//
-// });
-//==============================================================
-//LEAVE
-//==============================================================
-// client.on('guildMemberRemove', async member => {
-//
-//   let fetchleave = await db.fetch(`lmsg_${member.guild.id}`);
-//   let fetchchannel = await db.fetch(`lchannel_${member.guild.id}`);
-//
-//
-//   let leave;
-//   let channel;
-//
-//
-//   if(fetchleave == null) leave = "É uma pena. {user} deixou {server}.";
-//   else leave = fetchleave
-//
-//   if(fetchchannel == null) return;
-//   else channel = fetchchannel
-//
-//   try {
-//     member.guild.channel.get(channel).send({embed: {  Description: leave.replace('{user}', member.user).replace('{members}', member.guild.memberCount).repace('{server}', member.guild.name) }});
-//
-//   } catch(e) {
-//     return;
-//   }
-//
-// });
 
 //==============================================================
 //PRO BOT FUNCIONAR
