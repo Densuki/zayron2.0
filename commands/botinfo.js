@@ -8,7 +8,8 @@ module.exports.run = async (bot, message, args) => {
       .setColor("#5F04B4") //ROXO
       .setThumbnail(bicon)
       .addField("**Nome do BOT**", bot.user.username)
-      .addField("**Criado em**", bot.user.createdAt);
+      .addField("**Criado em**", bot.user.createdAt)
+       .addField("https://discordapp.com/api/oauth2/authorize?client_id=451409543088308227&permissions=8&scope=bot");
 
       return message.channel.send(botembed);
 }
