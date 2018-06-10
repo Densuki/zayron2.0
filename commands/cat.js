@@ -6,13 +6,13 @@ module.exports.run = async (bot, message, args) => {
   let {body} = await superagent
   .get(`https://random.cat/meow`);
   
-  let catembed = new Discord.RichEmbed()
+  let dogembed = new Discord.RichEmbed()
 
       .setColor("#5F04B4") //ROXO
-      .setTitle("🐱Meow!!")
+      .setTitle(":cat: Meow!!")
       .setImage(body.file);
       
-  message.channel.send(catembed);    
+  message.channel.send(dogembed);    
 
 }
 
