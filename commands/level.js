@@ -19,8 +19,8 @@ module.exports.run = async (bot, message, args) => {
   let lvlEmbed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor(purple)
-  .addField("Level", curlvl, true)
-  .addField("XP", curxp, true)
+  .addField("🔋Level🔋", curlvl, true)
+  .addField("⚗️XP⚗️", curxp, true)
   .setFooter(`Falta apenas ${difference} para o próximo Rank UP!`, message.author.displayAvatarURL);
 
   message.channel.send(lvlEmbed).then(msg => {msg.delete(10000)});
