@@ -83,7 +83,7 @@ bot.on("message", async message => {
      .setTitle("🎉⬆️Rank Up!⬆️🌟")
      .setColor(purple)
      .addField("🎇Próximo Nível🎇", curlvl + 1)
-     .addField("🌟Use o comando rank para verificar seus STATUS!🌟");
+     .addField("⬆️⬆️", "🌟Use o comando rank para verificar seus STATUS!🌟");
 
      message.channel.send(lvlup).then(msg => {msg.delete(100000)});
    }
