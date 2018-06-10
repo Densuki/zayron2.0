@@ -52,7 +52,13 @@ bot.on("ready", async () => {
 bot.on("message", async message => {
   if(message.author.bot) return;
   if(message.channel.type == "dm") return;
-
+  
+  let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
+  if(!prefixes[message.guild.id]){
+    prefixes[message.guild.id] = {
+      prefixes: botconfig.prefix
+    };   
+  }
 //==============================================================
 //LEVEL UP
 //==============================================================
@@ -86,7 +92,7 @@ bot.on("message", async message => {
 //==============================================================
 //COOLDOWNS
 //==============================================================
- // let prefix = prefixes[message.guild.id].prefixes;
+  let prefix = prefixes[message.guild.id].prefixes;
   if(!message.content.startsWith(prefix)) return;
   if(cooldown.has(message.author.id)){
     message.delete();
@@ -112,7 +118,7 @@ bot.on("message", async message => {
 //==============================================================  
 
   let prefix = botconfig.prefix;
-  //let prefix = prefixes[message.guild.id].prefixes;
+  let prefix = prefixes[message.guild.id].prefixes;
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
