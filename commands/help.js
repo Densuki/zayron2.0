@@ -15,7 +15,7 @@ message.channel.send(commandsEmbed);
    .setDescription("```Help Menu```")
    .setColor("#5F04B4") //ROXO
 
-   .addField("```Comandos para Membros```", "help, guildinfo, botinfo e report");
+   .addField("```Comandos para Membros```", "rank, help, guildinfo, botinfo e report");
 
 message.channel.send(helpEmbed);
 
