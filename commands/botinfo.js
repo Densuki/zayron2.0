@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
       .setThumbnail(bicon)
       .addField("**Nome do BOT**", bot.user.username)
       .addField("**Criado em**", bot.user.createdAt)
-       .addField("https://discordapp.com/api/oauth2/authorize?client_id=451409543088308227&permissions=8&scope=bot");
+       .addField("**INVITE**, https://discordapp.com/api/oauth2/authorize?client_id=451409543088308227&permissions=8&scope=bot");
 
       return message.channel.send(botembed);
 }
