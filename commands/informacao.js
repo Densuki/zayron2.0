@@ -4,7 +4,7 @@ module.exports.run = async (bot, message, args) => {
 
       let bicon = bot.user.displayAvatarURL;
       let botembed = new Discord.RichEmbed()
-      .setDescription("**Informações**")
+      .setDescription("**Informações para sugestões**")
       .setColor("#5F04B4") //ROXO
       .setThumbnail(bicon)
       .addField("*Para ajudar a organizar melhor, e ter maior facilidade pra saber quais mods vocês querem mandem as sugestões de mod no seguinte formato:*")
@@ -18,5 +18,5 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-  name:"informacao"
+  name:"info"
 }
