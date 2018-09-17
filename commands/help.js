@@ -40,5 +40,5 @@ message.reply("https://cdn.discordapp.com/attachments/452142750268129283/4521963
 }
 
 module.exports.help = {
-  name:"help"
+  name:"tasukete"
 }
