@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-        let botembed = new Discord.RichEmbed()
+        let infombed = new Discord.RichEmbed()
         .setDescription("**Informações para sugestões**")
         .setColor("#5F04B4") //ROXO
 
@@ -13,6 +13,7 @@ module.exports.run = async (bot, message, args) => {
        .addField("**Link:**", `https://minecraft.curseforge.com/projects/ender-io`)
        .addField("**Somente serão aceitas sugestões de mods, que estejam no curse. Mods como Witchery e Ars Magica não serão aceitas, pois os mesmo tem grande quantia de bugs.**\n\n Talvez em um futuro possam ser aceitos.");
 
+message.channel.send(infoEmbed);
 }
 
 module.exports.help = {
