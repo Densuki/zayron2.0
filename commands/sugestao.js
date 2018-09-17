@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
 
 
     if (args[0] == "help"){
-      message.reply("use: %sugestao seu nome + sua sugestão\n\n exemplo: `%sugestao @zayron para ser um STAFF!`").then(msg => msg.delete(5000));
+      message.reply("use: %sugestao seu nome + sua sugestão\n\n exemplo: `%sugestao @zayron para ser um STAFF!`");
       return;
     }
     let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
