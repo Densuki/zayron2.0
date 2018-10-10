@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
 
     //message.channel.send(reportEmbed);
 
-    let reportschannel = message.guild.channels.find(`name`, "sugestões");
+    let reportschannel = message.guild.channels.find(`name`, "sugestão");
     //Nome do canal (acho que ele cria o canal 🤔)
     if(!reportschannel) return message.channel.send("não foi possível encontrar o canal de sugestões.");
 
