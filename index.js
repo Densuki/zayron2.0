@@ -15,7 +15,7 @@ bot.commands = new Discord.Collection();
 let xp = require("./xp.json");
 let purple = botconfig.purple;
 let cooldown = new Set();
-let cdseconds = 60;
+let cdseconds = 30;
 //==============================================================
 //INFORMAÇÕES | EXPORT's
 //==============================================================
