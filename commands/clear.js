@@ -6,6 +6,7 @@ module.exports.run = async (bot, message, args) => {
   if(!args[0]) return message.channel.send("no");
   message.channel.bulkDelete(args[0]).then(() => {
   message.channel.send(`Mensagens ${args[0]} foram vanidas.`).then(msg => msg.delete(300));
+  //message.channel.send(``).then(msg => msg.delete(60));
 });
 
 }
