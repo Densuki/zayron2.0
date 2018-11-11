@@ -15,10 +15,10 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#5F04B4") //ROXO
     .addField(":exclamation: **Esteja ciente do PREFIX do BOT!** **O PREFIX deste artigo é o padrão.**", "**:warning:  Avisos**")
     //.addField("**:warning:  Avisos**")
-    .addField("**Essa é a economia da Netowrk. Caso você queira vender com preços maiores é por sua conta.** **Porém, qualquer preço que esteja a baixo do valor que foi proposto em alguma desta lista, o usuário será punido!**")
-    .addField("**Essa lista sempre será atualizada, fique de olho.**")
-    .addField(":calendar_spiral: **As listas serão atualizadas.**")
-    .addField("**FIQUE ATENTO(A)!**");
+    .addField("**Essa é a economia da Netowrk. Caso você queira vender com preços maiores é por sua conta.** **Porém, qualquer preço que esteja a baixo do valor que foi proposto em alguma desta lista, o usuário será punido!**", "**Essa lista sempre será atualizada, fique de olho.**")
+    //.addField("**Essa lista sempre será atualizada, fique de olho.**")
+    .addField(":calendar_spiral: **As listas serão atualizadas.**", "**FIQUE ATENTO(A)!**");
+    //.addField("**FIQUE ATENTO(A)!**");
 
     message.channel.send(precosEmbed);
 
