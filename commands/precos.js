@@ -12,9 +12,12 @@ module.exports.run = async (bot, message, args) => {
 //metion = message.mentions.users.first();
 //message.author.send
 //<@USER>
+//client.users.get("name", "USERNAMEHERE").id;
+//<%@ID%>
+//@name
 
     let precosEmbed = new Discord.RichEmbed()
-    .setDescription(<%@ID%>, "**Olá!** *Use os comandos em seu devido local.* \n\n **digite um dos comandos abaixo para entrar na tabela de preços que deseja:** \n\n :rocket: **EpicMC Network** \n\n **?vanilla | ?applied | ?tinkers | ?draconic | ?ic2 | ?thermal | ?factory | ?ender |**")
+    .setDescription("**Olá!** @name , *Use os comandos em seu devido local.* \n\n **digite um dos comandos abaixo para entrar na tabela de preços que deseja:** \n\n :rocket: **EpicMC Network** \n\n **?vanilla | ?applied | ?tinkers | ?draconic | ?ic2 | ?thermal | ?factory | ?ender |**")
     .setColor("#5F04B4") //ROXO
     .addField(":exclamation: **Esteja ciente do PREFIX do BOT!** **O PREFIX deste artigo é o padrão.**", "**:warning:  Avisos**")
     //.addField("**:warning:  Avisos**")
