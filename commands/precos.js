@@ -29,7 +29,7 @@ module.exports.run = async (bot, message, args) => {
     message.channel.send(precosEmbed);
 
     let economychannel = message.guild.channels.find(`name`, "comandos");
-    Nome do canal (acho que ele cria o canal 🤔)
+    //Nome do canal (acho que ele cria o canal 🤔)
     if(!economychannel) return message.channel.send("não foi possível encontrar o canal de comandos. Cria,  Rué");
 
 
