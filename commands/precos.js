@@ -11,10 +11,10 @@ module.exports.run = async (bot, message, args) => {
     }
 
     let precosEmbed = new Discord.RichEmbed()
-    .setDescription("**Olá!**, *Use os comandos em seu devido local.* \n\n **digite um dos comandos abaixo para entrar na tabela de preços que deseja:** \n\n :rocket: **EpicMC Network** \n\n **?vanilla | ?applied | ?tinkers | ?draconic | ?ic2 | ?thermal | ?factory | ?ender |**")
+    .setDescription("**Olá!** {user}, *Use os comandos em seu devido local.* \n\n **digite um dos comandos abaixo para entrar na tabela de preços que deseja:** \n\n :rocket: **EpicMC Network** \n\n **?vanilla | ?applied | ?tinkers | ?draconic | ?ic2 | ?thermal | ?factory | ?ender |**")
     .setColor("#5F04B4") //ROXO
-    .addField(":exclamation: **Esteja ciente do PREFIX do BOT!** **O PREFIX deste artigo é o padrão.**")
-    .addField("**:warning:  Avisos**")
+    .addField(":exclamation: **Esteja ciente do PREFIX do BOT!** **O PREFIX deste artigo é o padrão.**", "**:warning:  Avisos**")
+    //.addField("**:warning:  Avisos**")
     .addField("**Essa é a economia da Netowrk. Caso você queira vender com preços maiores é por sua conta.** **Porém, qualquer preço que esteja a baixo do valor que foi proposto em alguma desta lista, o usuário será punido!**")
     .addField("**Essa lista sempre será atualizada, fique de olho.**")
     .addField(":calendar_spiral: **As listas serão atualizadas.**")
