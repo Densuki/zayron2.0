@@ -5,10 +5,10 @@ module.exports.run = async (bot, message, args) => {
   //%report @ned Esta é a razão (Reação?)
 
 
-    //if (args[0] == "help"){
-    //  message.reply("use: %sugestao seu nome + sua sugestão\n\n exemplo: `%sugestao @zayron para ser um STAFF!`");
-    //  return;
-    //}
+    if (args[0] == "help"){
+      message.reply("```Aqui será dado uma amostra do que tem na economia do servidor```");
+      return;
+    }
 
     let precosEmbed = new Discord.RichEmbed()
     .setDescription("**Olá!**, *Use os comandos em seu devido local.* \n\n **digite um dos comandos abaixo para entrar na tabela de preços que deseja:** \n\n :rocket: **EpicMC Network** \n\n **?vanilla | ?applied | ?tinkers | ?draconic | ?ic2 | ?thermal | ?factory | ?ender |**")
@@ -19,7 +19,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("**Essa lista sempre será atualizada, fique de olho.**")
     .addField(":calendar_spiral: **As listas serão atualizadas.**")
     .addField("**FIQUE ATENTO(A)!**");
-    
+
     //message.channel.send(reportEmbed);
 
     //let reportschannel = message.guild.channels.find(`name`, "canal-de-sugestões");
