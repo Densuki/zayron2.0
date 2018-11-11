@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
 
 
     if (args[0] == "help"){
-      message.reply("```Aqui será dado uma amostra do que tem na economia do servidor```");
+      message.reply("```Aqui será dado uma amostra do que tem na economia do servidor. Todos os comandos irá para o canal de comandos.```");
       return;
     }
 //metion = message.mentions.users.first();
