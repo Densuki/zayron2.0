@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
 //@name
 
     let precosEmbed = new Discord.RichEmbed()
-    .setDescription("**Olá!** *Use os comandos em seu devido local.* \n\n **digite um dos comandos abaixo para entrar na tabela de preços que deseja:** \n\n :rocket: **EpicMC Network** \n\n **?vanilla | ?applied | ?tinkers | ?draconic | ?ic2 | ?thermal | ?factory | ?ender |**")
+    .setDescription("**Olá!** *Use os comandos em seu devido local.* \n\n **digite um dos comandos abaixo para entrar na tabela de preços que deseja:** \n\n :rocket: **EpicMC Network** \n\n **| vanilla | applied | tinkers | draconic | ic2 | thermal | factory | ender |**")
     .setColor("#5F04B4") //ROXO
     .addField(":exclamation: **Esteja ciente do PREFIX do BOT!** **O PREFIX deste artigo é o padrão.**", "**:warning:  Avisos**")
     //.addField("**:warning:  Avisos**")
@@ -28,13 +28,13 @@ module.exports.run = async (bot, message, args) => {
 
     message.channel.send(precosEmbed);
 
-    //let reportschannel = message.guild.channels.find(`name`, "canal-de-sugestões");
-    //Nome do canal (acho que ele cria o canal 🤔)
-    //if(!reportschannel) return message.channel.send("não foi possível encontrar o canal de sugestões.");
+    let economychannel = message.guild.channels.find(`name`, "comandos");
+    Nome do canal (acho que ele cria o canal 🤔)
+    if(!economychannel) return message.channel.send("não foi possível encontrar o canal de comandos. Cria,  Rué");
 
 
-    //message.delete().catch(O_o=>{});
-    //reportschannel.send(reportEmbed);
+    message.delete().catch(O_o=>{});
+    economychannel.send(precosEmbed);
 
 }
 
