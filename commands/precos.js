@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
     .addField(":calendar_spiral: **As listas serão atualizadas.**")
     .addField("**FIQUE ATENTO(A)!**");
 
-    //message.channel.send(reportEmbed);
+    message.channel.send(precosEmbed);
 
     //let reportschannel = message.guild.channels.find(`name`, "canal-de-sugestões");
     //Nome do canal (acho que ele cria o canal 🤔)
