@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
       message.reply("```Aqui será dado uma amostra do que tem na economia do servidor.```\n\n **PREÇOS RELACIONADOS AOS ITENS VANILLA!**");
       return;
     }
-
+glowstone = glowstone 8c;
 
     let precosEmbed = new Discord.RichEmbed()
     .setDescription("**Olá!** *Use os comandos em seu devido local.*\n\n:rocket: **EpicMC Network**")
@@ -19,7 +19,8 @@ module.exports.run = async (bot, message, args) => {
     .addField("**:pick: | Minerais**","Coal = 5c\n\nIron Ingot = 8c\n\nGold Ingot = 10c\n\nRedstone = 8c\n\nLápis Lazuli = 15c\n\nDiamond = 15c\n\nEsmerald = 15c\n\nObsidian = 10c")
     .addField("**:gear: | Mecânicos**","Piston = 26c\n\nDropper = 15c\n\nDispenser = 22.5c")
     .addField("**:crossed_swords: | Armas**","Wooden Sword = 2.5c\n\nStone Sword = 4.5c\n\nIron Sword = 16c\n\nDiamond Sword = 30c\n\nGolden Sword = 20c\n\nBow = 7.5c")
-    .addField("**:gift: | Micélio**","Human Head (Steve) = 10.000c\n\nZombie Head = 5.000c\n\nSkelecton Head = 2.500c\n\nEnderman Head = 8.000c\n\nWither Skelecton Head = 10.000c\n\nNether Star = 1.000c\n\nBlaze Rod = 300c\n\nBlaze Powder = 150c\n\nEnder Pearl = 30c\n\nGhast tear 80c\n\nEye Of Ender =  35c\n\nNether Wart = 4c\n\nSlime = 4c\n\nApple = 10c");
+    .addField("**:gift: | Micélio**","Human Head (Steve) = 10.000c\n\nZombie Head = 5.000c\n\nSkelecton Head = 2.500c\n\nEnderman Head = 8.000c\n\nWither Skelecton Head = 10.000c\n\nNether Star = 1.000c\n\nBlaze Rod = 300c\n\nBlaze Powder = 150c\n\nEnder Pearl = 30c\n\nGhast tear 80c\n\nEye Of Ender =  35c\n\nNether Wart = 4c\n\nSlime = 4c\n\nApple = 10c")
+    .addField("**:eight_pointed_black_star: test**", "glowstone");
 
     //message.channel.send(precosEmbed);
 
