@@ -20,19 +20,7 @@ module.exports.run = async (bot, message, args) => {
     let precosEmbed = new Discord.RichEmbed()
     .setDescription("**Olá!** *Use os comandos em seu devido local.* \n\n **digite um dos comandos abaixo para entrar na tabela de preços que deseja:** \n\n :rocket: **EpicMC Network** \n\n **| vanilla | applied | tinkers | draconic | ic2 | thermal | factory | ender |**")
     .setColor("#5F04B4") //ROXO
-    .addField("**:fireworks: | Primordiais**",
-"Wood [Qualquer madeira] = 2c\n\n
-\n\nStick = 1c
-\n\nDirt = 1c
-\n\nCobblestone = 1c
-\n\nStone = 2c
-\n\nGravel = 1c
-\n\nSand = 1c
-\n\nClay = 2c
-\n\nIce = 2c
-\n\nCharcoal = 3c
-\n\nNetherrack = 2c
-\n\nSoul Sand = 3c")
+    .addField("**:fireworks: | Primordiais**", "Wood [Qualquer madeira] = 2c\n\nStick = 1c\n\nDirt = 1c\n\nCobblestone = 1c\n\nStone = 2c\n\nGravel = 1c\n\nSand = 1c\n\nClay = 2c\n\nIce = 2c\n\nCharcoal = 3c\n\nNetherrack = 2c\n\nSoul Sand = 3c")
     //.addField("**:warning:  Avisos**")
     .addField("**Essa é a economia da Network. Caso você queira vender com preços maiores é por sua conta.** **Porém, qualquer preço que esteja a baixo do valor que foi proposto em alguma desta lista, o usuário será punido!**", "**Essa lista sempre será atualizada, fique de olho.**")
     //.addField("**Essa lista sempre será atualizada, fique de olho.**")
