@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
       return;
     }
 //glowstone = "glowstone 8c";
-val glowstone = "glowstone 8c";
+if (glowstone) = "glowstone 8c";
 
     let precosEmbed = new Discord.RichEmbed()
     .setDescription("**Olá!** *Use os comandos em seu devido local.*\n\n:rocket: **EpicMC Network**")
