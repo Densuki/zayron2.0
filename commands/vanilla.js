@@ -9,7 +9,8 @@ module.exports.run = async (bot, message, args) => {
       message.reply("```Aqui será dado uma amostra do que tem na economia do servidor.```\n\n **PREÇOS RELACIONADOS AOS ITENS VANILLA!**");
       return;
     }
-glowstone = "glowstone 8c";
+//glowstone = "glowstone 8c";
+val glowstone = "glowstone 8c";
 
     let precosEmbed = new Discord.RichEmbed()
     .setDescription("**Olá!** *Use os comandos em seu devido local.*\n\n:rocket: **EpicMC Network**")
