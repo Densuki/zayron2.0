@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#5F04B4") //ROXO
     .addField(":fire: **|Lingotes|**","================")
     .addField("**|__Ingot__|**","Nickel | Ferrous = 16c\nCopper = 12c\nBronze = 48c\nTin = 12c\nAluminium = 20c\nAluminum Brass = 36c\nAlumite = 38c\nSteel= 28c\nCobalt = 30c\nArdite = 30c\nManyullyn = 60c\nPig Iron = 120c")
-    .addField("**|__Block__|**","Block Solid of Ender = 120c\nNickel | Ferrous = 144c\nCopper = 108c\nBronze = 432c\nTin = 108c\nAluminium = 180c\nAluminum Brass = 324c\nAlumite = 342c\nSteel= 252c\nCobalt = 270c\nArdite = 270c\nManyullyn = 540c\nPig Iron = 1.080c")
+    .addField("**|__Block__|**","Block Solid of Ender = 120c\nNickel | Ferrous = 144c\nCopper = 108c\nBronze = 432c\nTin = 108c\nAluminium = 180c\nAluminum Brass = 324c\nAlumite = 342c\nSteel = 252c\nCobalt = 270c\nArdite = 270c\nManyullyn = 540c\nPig Iron = 1.080c")
     .addField("================","**================**")
     .addField("**|__ExtraTiC__|**","Fairy Ingot = 50c\nPokefennium Ingot = 50c\nRedAurum Ingot = 500c\nDrulloy Ingot = 500c");
 
