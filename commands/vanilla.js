@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
 
 
     if (args[0] == "help"){
-      message.reply("```Aqui será dado uma amostra do que tem na economia do servidor.```\n\n**PREÇOS RELACIONADOS AOS ITENS VANILLA!**\nDigite `%vanilla` que mostrarei os preços relacionados a ela.");
+      message.reply("```Aqui será dado uma amostra do que tem na economia do servidor.```\n\n**PREÇOS RELACIONADOS AOS ITENS VANILLA!**\nDigite `%vanilla` que mostrarei os preços relacionadas à ela.");
       return;
     }
 
