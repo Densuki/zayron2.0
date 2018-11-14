@@ -18,7 +18,13 @@ module.exports.run = async (bot, message, args) => {
     .addField(":shield: **| Armaduras |**","================")
     .addField("**__| Wooden SET |__**","Helmet = 10c\nChestplate = 16c\nLeggings = 14c\nBoots = 8c\n\n(**__Total = 48c__**)")
     .addField("**================**","**================**")
-    .addField("**__| Traveller's SET |__**","Googles = 36c\nVest = 60c\nWings = 262c\nGloves = 24c\nBoots = 48c\nBelt = 72c\n\n(**__Total = 502c__**)");
+    .addField("**__| Traveller's SET |__**","Googles = 36c\nVest = 60c\nWings = 262c\nGloves = 24c\nBoots = 48c\nBelt = 72c\n\n(**__Total = 502c__**)")
+    .addField(":gift: **| Micélios |**","**================**")
+    .addField(":bento: **| Jerky's |**",":cow: Beef =  4c\n:chicken: Chicken = 4c\n:pig: Bacon = 4c\n:sheep: Mutton = 4c\n:fish: Fish = 10c\n:kkkkk: Monster = 2c")
+    .addField("**================**","**Jeweled Apple = 70c\nNecrotic Bone = 100c\nSlime Soil = 8c\nGraveyard Soil = 10c\nSilky Jewel = 151c\nSilky Cloth = 34c\nBall of Glue = 200c\nBall of Moss = 50c\nLava Crystal = 1.500c\nSlime Sappling = 50c\nSlime Crystal (Green) = 22c\nSlime Mud (Green) = 17.5c\nSlime Mud (Blue) = 35c\nSlime Crystal (Blue) = 40c\nPaper stack = 12c\nBlank Cast = 16c\nClear Glass = 4c\nRough Brownstone = 13c**")
+    .addField(":warning:  **Avisos**","**Calma! Que ainda tem mais!**")
+    .addField("**Essa não é a única lista deste mod.**","**================**")
+    .addField("**|__:gem: ingotstinkers | :fire: fornalhatinkers | :pick: ferramentastinkers | :crossed_swords: armastinkers__|**","**__sempre será atualizada, fique de olho!__**");
 
     //message.channel.send(precosEmbed);
 
