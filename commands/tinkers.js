@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("**================**","Jeweled Apple = 70c\nNecrotic Bone = 100c\nSlime Soil = 8c\nGraveyard Soil = 10c\nSilky Jewel = 151c\nSilky Cloth = 34c\nBall of Glue = 200c\nBall of Moss = 50c\nLava Crystal = 1.500c\nSlime Sappling = 50c\nSlime Crystal (Green) = 22c\nSlime Mud (Green) = 17.5c\nSlime Mud (Blue) = 35c\nSlime Crystal (Blue) = 40c\nPaper stack = 12c\nBlank Cast = 16c\nClear Glass = 4c\nRough Brownstone = 13c")
     .addField(":warning:  **Avisos**","**Calma! Que ainda tem mais!**")
     .addField("**Essa não é a única lista deste mod.**","**================**")
-    .addField("**|__:gem: ingotstinkers | :fire: fornalhatinkers |\n:pick: ferramentastinkers | :crossed_swords: armastinkers__|**","**__sempre será atualizada, fique de olho!__**");
+    .addField("**|__:gem: ingotstinkers | :fire: fornalhatinkers |\n|:pick: ferramentastinkers | :crossed_swords: armastinkers__|**","**__sempre será atualizada, fique de olho!__**");
 
     //message.channel.send(precosEmbed);
 
