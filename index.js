@@ -3,7 +3,7 @@
 //==============================================================
 const botconfig = require("./botconfig.json");
 const Discord = require("discord.js");
-const highlight = require("node_modules/highlight.js/styles/github.css");
+//const highlight = require("node_modules/highlight.js/styles/github.css");
 //const websocket = require(WebSocketPacketManager.js);
 //const tokenfile = require("./token.json");
 const token = process.env.token;
