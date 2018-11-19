@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 //import hljs from 'highlight.js';
-import hljs from 'highlight.js/lib/highlight';
+//import hljs from 'highlight.js/lib/highlight';
 import javascript from 'highlight.js/lib/languages/javascript';
 hljs.registerLanguage('javascript', javascript);
 import 'highlight.js/styles/github.css'
