@@ -41,7 +41,7 @@ fs.readdir("./commands/", (err, files) => {
 bot.on("ready", async () => {
   console.log(`${bot.user.username} Estar Online em ${bot.guilds.size} server(s)!`);
 
-  bot.user.setActivity("Nada🤔Mas meu prefix é % 😅", {type: "PLAYING"});
+  bot.user.setActivity("Almas para o Lunik", {type: "PLAYING"}); //Nada🤔Mas meu prefix é % 😅
 
   //bot.user.setGame("on SourceCade!");
 
@@ -144,7 +144,7 @@ bot.on("message", async message => {
   if(!message.content.startsWith(prefix)) return;
   if(cooldown.has(message.author.id)){
     message.delete();
-    return message.reply("Você tem que esperar 60 segundos para usar o comando novamente.")
+    return message.reply("Você tem que esperar 365 dias 60 minutos 60 segundos e 300 miléssimos para usar o comando novamente. Ou apenas 60 segundos u.u")
   }
   if(!message.member.hasPermission("ADMINISTRATOR")){
     cooldown.add(message.author.id);
