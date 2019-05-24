@@ -105,6 +105,7 @@ bot.on("message", async message => {
   }
   //let prefix = prefixes[message.guild.id].prefixes;
   //console.log(prefix);
+{
 //==============================================================
 //LEVEL UP
 //==============================================================
@@ -136,7 +137,7 @@ bot.on("message", async message => {
 //    fs.writeFile("./xp.json", JSON.stringify(xp), (err) => {
 //      if(err) console.log(err)
 // });
-
+}
 //==============================================================
 //COOLDOWNS
 //==============================================================
