@@ -43,7 +43,7 @@ fs.readdir("./commands/", (err, files) => {
 bot.on("ready", async () => {
   console.log(`${bot.user.username} Estar Online em ${bot.guilds.size} server(s)!`);
 
-  bot.user.setActivity("As almas para o Lunik", {type: "PLAYING"}); //Nada🤔Mas meu prefix é % 😅
+  // bot.user.setActivity("As almas para o Lunik", {type: "PLAYING"}); //Nada🤔Mas meu prefix é % 😅
 
 
 });
