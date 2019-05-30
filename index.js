@@ -1,22 +1,26 @@
 ﻿//==============================================================
 //INFORMAÇÕES | IMPORT's
 //==============================================================
+{
 const botconfig = require("./botconfig.json");
 const Discord = require("discord.js");
+const token = process.env.token;
+const fs = require("fs");
+
 //const highlight = require("node_modules/highlight.js/styles/github.css");
 //const websocket = require(WebSocketPacketManager.js);
 //const tokenfile = require("./token.json");
-const token = process.env.token;
-const fs = require("fs");
-//test
-
+}
+{
 const bot = new Discord.Client({disableEveryone: true});
 
 bot.commands = new Discord.Collection();
-let xp = require("./xp.json");
-let purple = botconfig.purple;
 let cooldown = new Set();
 let cdseconds = 30;
+
+let xp = require("./xp.json");
+let purple = botconfig.purple;
+}
 //==============================================================
 //INFORMAÇÕES | EXPORT's
 //==============================================================
@@ -44,49 +48,50 @@ bot.on("ready", async () => {
 
   bot.user.setActivity("As almas para o Lunik", {type: "PLAYING"}); //Nada🤔Mas meu prefix é % 😅
 
-  //bot.user.setGame("on SourceCade!");
 
 });
-//==============================================================
-//WELCOME
-//==============================================================
-bot.on("guildMemberAdd", async member => {
-  console.log(`${member.id} Entrou no servidor.`);
+{
+// //==============================================================
+// //WELCOME
+// //==============================================================
+// bot.on("guildMemberAdd", async member => {
+//   console.log(`${member.id} Entrou no servidor.`);
 
-  let welcomechannel = member.guild.channels.find(`name`, "chat-principal");
-  welcomechannel.send(`Seja Bem-Vindo ${member}. Não esqueça de ler as regras!`);
-});
-//==============================================================
-//LEAVE
-//==============================================================
-bot.on("guildMemberRemove", async member => {
-  console.log(`${member.id} Saiu do servidor.`);
+//   let welcomechannel = member.guild.channels.find(`name`, "chat-principal"); //log yron
+//   welcomechannel.send(`Seja Bem-Vindo ${member}. Não esqueça de ler as regras!`);
+// });
+// //==============================================================
+// //LEAVE
+// //==============================================================
+// bot.on("guildMemberRemove", async member => {
+//   console.log(`${member.id} Saiu do servidor.`);
 
-  let welcomechannel = member.guild.channels.find(`name`, "chat-principal");
-  welcomechannel.send(`É uma pena que mais um de nossa tropa acabara de nos deixar. Nos vemos na próxima ${member}`);
-});
-//==============================================================
-//Criação de Canais | Sala
-//==============================================================
+//   let welcomechannel = member.guild.channels.find(`name`, "chat-principal"); //log yron
+//   welcomechannel.send(`É uma pena que mais um de nossa tropa acabara de nos deixar. Nos vemos na próxima ${member}`);
+// });
+// //==============================================================
+// //Criação de Canais | Sala
+// //==============================================================
 
-bot.on("ChannelCreate", async channel => {
+// bot.on("ChannelCreate", async channel => {
 
-  console.log(`${channel.name} Foi criado!`);
+//   console.log(`${channel.name} Foi criado!`);
 
-  let sChannel = channel.guild.channels.find(`name`, "general");
-  sChannel.send(`${channel} Foi criado`);
-});
-//==============================================================
-//Apagamento de Canais | Sala
-//==============================================================
+//   let sChannel = channel.guild.channels.find(`name`, "general"); //log yron
+//   sChannel.send(`${channel} Foi criado`);
+// });
+// //==============================================================
+// //Apagamento de Canais | Sala
+// //==============================================================
 
-bot.on("ChannelDelete", async channel => {
+// bot.on("ChannelDelete", async channel => {
 
-  console.log(`${channel.name} Foi deletado!`);
+//   console.log(`${channel.name} Foi deletado!`);
 
-  let sChannel = channel.guild.channels.find(`name`, "general");
-  sChannel.send(`${channel.name} Foi deletado`);
-});
+//   let sChannel = channel.guild.channels.find(`name`, "general"); //log yron
+//   sChannel.send(`${channel.name} Foi deletado`);
+// });
+}
 //==============================================================
 //PARA AS MENSAGENS FUNCIONAREM
 //==============================================================
@@ -103,6 +108,7 @@ bot.on("message", async message => {
 
     };
   }
+
   //let prefix = prefixes[message.guild.id].prefixes;
   //console.log(prefix);
 {
