@@ -1,7 +1,6 @@
 ﻿//==============================================================
 //INFORMAÇÕES | IMPORT's
 //==============================================================
-{
 const botconfig = require("./botconfig.json");
 const Discord = require("discord.js");
 const token = process.env.token;
@@ -10,8 +9,7 @@ const fs = require("fs");
 //const highlight = require("node_modules/highlight.js/styles/github.css");
 //const websocket = require(WebSocketPacketManager.js);
 //const tokenfile = require("./token.json");
-}
-{
+//==============================================================
 const bot = new Discord.Client({disableEveryone: true});
 
 bot.commands = new Discord.Collection();
@@ -20,7 +18,6 @@ let cdseconds = 30;
 
 let xp = require("./xp.json");
 let purple = botconfig.purple;
-}
 //==============================================================
 //INFORMAÇÕES | EXPORT's
 //==============================================================
