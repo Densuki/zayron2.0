@@ -153,7 +153,7 @@ bot.on("message", async message => {
     message.delete();
     return message.reply("Você tem que esperar 365 dias 60 minutos 60 segundos e 300 miléssimos para usar o comando novamente. Ou apenas 60 segundos u.u")
   }
-  if(!message.member.hasPermission("ADMINISTRATOR", "336311215099740160")){
+  if(!message.member.hasPermission("ADMINISTRATOR")){
     cooldown.add(message.author.id);
   }
 
