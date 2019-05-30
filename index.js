@@ -43,7 +43,7 @@ fs.readdir("./commands/", (err, files) => {
 bot.on("ready", async () => {
   console.log(`${bot.user.username} Estar Online em ${bot.guilds.size} server(s)!`);
 
-  // bot.user.setActivity("As almas para o Lunik", {type: "PLAYING"}); //Nada🤔Mas meu prefix é % 😅
+  bot.user.setActivity("As almas para o Lunik", {type: "PLAYING"}); //Nada🤔Mas meu prefix é % 😅
 
 
 });
@@ -153,7 +153,7 @@ bot.on("message", async message => {
     message.delete();
     return message.reply("Você tem que esperar 365 dias 60 minutos 60 segundos e 300 miléssimos para usar o comando novamente. Ou apenas 60 segundos u.u")
   }
-  if(!message.member.hasPermission("ADMINISTRATOR")){
+  if(!message.member.hasPermission("ADMINISTRATOR", "336311215099740160")){
     cooldown.add(message.author.id);
   }
 
